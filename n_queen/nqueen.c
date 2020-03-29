@@ -45,9 +45,9 @@ int n_queens(int* position, int curr, int n) {
 
 
 
-int* solve_n_queens(int start, int n) {
+int* solve_n_queens(int n) {
     int* position = (int*)malloc(sizeof(int) * n);  //holds the current position (row no) of each queen in each column
-    for (int i = start; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         position[i] = -1;
     }
 
@@ -65,7 +65,7 @@ int main() {
     printf("Enter the board size: ");
     scanf("%d", &size);
     
-    solve_n_queens(-1, size);
+    solve_n_queens(size);
      
     return 0;
 }
